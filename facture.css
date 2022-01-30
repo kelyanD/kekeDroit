@@ -6,8 +6,8 @@
 	font-size: 16px;
 	margin: auto;
 	padding: 0px;
-	border-top: 15px solid blue;
-	border-bottom: 15px solid blue;
+	border-top: 15px solid grey;
+	border-bottom: 15px solid grey;
 	display: block;
 }
 .entete
@@ -15,7 +15,7 @@
 	border: 2px solid transparent;
 	height: 200px;
 	padding: 10px;
-	background-color: lightskyblue;
+	background-color: black;
 	font-size: 13px;
 	text-align: justify;
 }
@@ -72,13 +72,13 @@
 h5
 {
 	line-height: 1em;
-	border-bottom: 3px solid blue;
+	border-bottom: 3px solid grey;
 	width: 300px;
 
 
 }
 h5 span{
-	background:blue ;
+	background:grey ;
 	padding: 10px;
 }
 
@@ -99,8 +99,8 @@ h1
 	display: block;
 }
 .titretab{
-	background-color: lightskyblue;
-	color: ghostwhite;
+	background-color: grey;
+	color: white;
 	text-align: center;
 	border-style: none;
 }
@@ -158,7 +158,7 @@ td.numfacture
 {
 	border-bottom: 1px solid;
 	border:  hidden;
-	background-color:lightskyblue;
+	background-color:grey;
 	border:  hidden;
 	border: 0px;
 }
