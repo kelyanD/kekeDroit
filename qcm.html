@@ -1,0 +1,174 @@
+<!doctype html>
+
+<html>
+	
+		<head>
+		<meta charset="utf-8">
+		
+		<title>QCM</title>
+	
+	<script type="text/javascript">
+	
+	function nobelong(a,list)
+	{
+	for(i = 0;list[i];i++)
+		if(a == list[i])
+			return 1;
+	return 0;
+	}
+	function check(idname,list)
+	{
+	document.getElementById(idname).value = "correct";
+	for(var i=0;list[1][i];i++)
+	{
+		if(list[0][list[1][i]] == false){
+			document.getElementById(idname).value = "incorrect";
+		}
+	}
+	for(var a = 0;list[a];a++)
+		if(list[0][a] == true && nobelong(a,list[1]) == 0){
+			document.getElementById(idname).value = "incorrect";
+		}
+	if(document.getElementById(idname).value == "incorrect"){
+		document.getElementById(idname).className = "er";
+		return 0;
+	}
+	else
+		document.getElementById(idname).className = "cache";
+		return 1;
+	}
+
+	function corection()
+		{
+			var a1 =document.getElementById("q1-1").checked;
+			var a2 =document.getElementById("q1-2").checked;
+			var a3 =document.getElementById("q1-3").checked;
+			let q1 =[[a1,a2,a3],[2]];
+
+			var b1 =document.getElementById("q2-1").checked;
+			var b2 =document.getElementById("q2-2").checked;
+			var b3 =document.getElementById("q2-3").checked;
+			let q2 =[[b1,b2,b3],[2]];
+
+			var c1 =document.getElementById("q3-1").checked;
+			var c2 =document.getElementById("q3-2").checked;
+			var c3 =document.getElementById("q3-3").checked;
+			let q3 =[[c1,c2,c3],[2]];
+
+			var d1 =document.getElementById("q4-1").checked;
+			var d2 =document.getElementById("q4-2").checked;
+			var d3 =document.getElementById("q4-3").checked;
+			let q4 =[[0,d2,d3],[1]];
+
+			var e1 =document.getElementById("q5-1").checked;
+			var e2 =document.getElementById("q5-2").checked;
+			var e3 =document.getElementById("q5-3").checked;
+			let q5 =[[e1,e2,e3],[2]];
+			var some = 0;
+
+			some += check("rep1",q1);
+			some += check("rep2",q2);
+			some += check("rep3",q3);
+			some += check("rep4",q4);
+			some += check("rep5",q5);
+
+			alert("votre score est de "+some + "/5")
+
+		}
+		</script>
+			</head>
+	
+	<body>
+	<body style="background-color :#CFCFCF;">
+		
+		<header>
+			<h1>QCM</h1>		
+		</header>
+	
+			<form>
+
+	<fieldset>
+			<legend>Une orange est-elle orange ?</legend></h2><input type="text" readonly="readonly" id="rep1" class="cache">
+		
+		<input type="checkbox" id="q1-1" class="q1">
+		<label for="q1-1">Vert</label>
+			
+		<input type="checkbox" id="q1-2" class="q1">
+		<label for="q1-2">non</label>
+				
+		<input type="checkbox" id="q1-3" class="q2">
+		<label for="q1-3">effectivement</label>
+				
+		
+	</fieldset>
+
+	<fieldset>
+				<legend>Qu'est-ce ? :</legend>
+				<img src="chat.jpg" height="352" width="100%" ></legend><input type="text" readonly="readonly" id="rep2" class="cache">
+		
+		<input type="checkbox" id="q2-1" class="q2">
+			<label for="q2-1">Une église</label>
+		
+		<input type="checkbox" id="q2-2" class="q2">
+		<label for="q2-2">De la levure</label>
+		
+		<input type="checkbox" id="q2-3" class="q2">
+		<label for="q2-3">Un chat</label>
+				
+		
+	</fieldset>
+
+
+	<fieldset>
+			<legend>Parmi ces chiffres, lequel n'est pas un nombre premier?</legend><input type="text" readonly="readonly" id="rep3" class="cache">
+	
+		<input type="checkbox" id="q3-1" class="q3">
+		<label for="q3-1">7</label>
+		
+		<input type="checkbox" id="q3-2" class="q3">
+		<label for="q3-2">58</label>
+	
+		<input type="checkbox" id="q3-3" class="q3">
+		<label for="q3-3">31</label>
+
+	</fieldset>
+	
+
+	<fieldset>
+			<legend>Quel heure est-t-il ?</legend></h2><input type="text" readonly="readonly" id="rep4" class="cache">
+
+		<input type="checkbox" id="q4-1" class="q4">
+		<label for="q4-1">12h54</label>
+	
+		<input type="checkbox" id="q4-2" class="q4">
+		<label for="q4-2">L'heure qu'il est</label>
+	
+		<input type="checkbox" id="q4-3" class="q4">
+		<label for="q4-3">21h01</label>
+	</fieldset>
+	
+
+	<fieldset>
+			<legend>Vrai ou Faux ?</legend><input type="text" readonly="readonly" id="rep5" class="cache">
+	
+		<input type="checkbox" id="q5-1" class="q5">
+		<label for="q5-1">Je sais pas</label>
+
+		<input type="checkbox" id="q5-2" class="q5">
+		<label for="q5-2">Faux</label>
+	
+		<input type="checkbox" id="q5-3" class="q5">
+		<label for="q5-3">Vrai</label>
+	</fieldset>
+	
+
+	<fieldset>
+		<input type="button" onclick="corection()" name="correction" value="Correction">
+		<input type="reset" name="reset" value="Effacer">
+	</fieldset>
+	
+	</form>
+
+	</body>
+
+</html>
