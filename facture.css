@@ -13,7 +13,7 @@
 	border: 2px solid transparent;
 	height: 200px;
 	padding: 10px;
-	background-color: #E7FFB3;
+	background-color: LightGoldenrodYellow;
 	font-size: 13px;
 	text-align: justify;
 }
@@ -90,7 +90,7 @@ h1
 .fondtab
 { 
 	border-style: none;
-	background-color: lightgrey;
+	background-color: LightGoldenrodYellow;
 
  }
  .tableau
